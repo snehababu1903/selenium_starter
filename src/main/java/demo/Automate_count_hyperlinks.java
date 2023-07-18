@@ -35,8 +35,9 @@ public class Automate_count_hyperlinks {
 
         List<WebElement> anchorTags = driver.findElements(By.tagName("a"));
         int elemSize = anchorTags.size();
-        System.out.println("the count of hyperlinks i the page is: " + elemSize);
+        System.out.println("the count of hyperlinks in the page is: " + elemSize);
 
+        
         System.out.println("end Test case: testCase01");
 
     }
