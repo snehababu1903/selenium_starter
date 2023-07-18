@@ -8,16 +8,12 @@ import java.net.MalformedURLException;
 public class App {
     public void getGreeting() throws InterruptedException, MalformedURLException {
         // TestCases tests = new TestCases(); // Initialize your test class
-        SearchAmazon srcAmz = new SearchAmazon();
+        // SearchAmazon srcAmz = new SearchAmazon();
+        Automate_count_hyperlinks ach = new Automate_count_hyperlinks();
 
-        // TODO: call your test case functions one after other here
-        srcAmz.testCase01();
+        ach.testCase01();
 
-        // tests.testCase01();
-
-        // END Tests
-
-        srcAmz.endTest(); // End your test by clearning connections and closing browser
+        ach.endTest(); // End your test by clearning connections and closing browser
     }
 
     public static void main(String[] args) throws InterruptedException, MalformedURLException {
