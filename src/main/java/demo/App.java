@@ -12,11 +12,12 @@ public class App {
         // Automate_count_hyperlinks ach = new Automate_count_hyperlinks();
         // Automate_image_urls aiu = new Automate_image_urls();
         // Automate_nested_frames_text anft = new Automate_nested_frames_text();
-        Automate_imdb_ratings air = new Automate_imdb_ratings();
+        // Automate_imdb_ratings air = new Automate_imdb_ratings();
+        Automate_window_handle awh = new Automate_window_handle();
 
-        air.testCase01();
+        awh.testCase01();
 
-        air.endTest(); // End your test by clearning connections and closing browser
+        awh.endTest(); // End your test by clearning connections and closing browser
     }
 
     public static void main(String[] args) throws InterruptedException, MalformedURLException {

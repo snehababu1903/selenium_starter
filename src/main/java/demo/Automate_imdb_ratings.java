@@ -82,14 +82,9 @@ public class Automate_imdb_ratings {
         mvnm = moviename.getText();
         System.out.println("oldest movie name is :" + mvnm);
 
-        // Identify the list of user ratings Using Locator "XPath"
-        // //div[@data-testid='ratingGroup--container']/span
-        // iterate over the list to get highest value of user rating
-        // ul/li//span[@class='sc-14dd939d-1
-        // PnacM']//span[contains(text(),'9.3')]/ancestor::div[@class='sc-14dd939d-0
-        // fBusXE cli-children']//h3
         List<WebElement> ratingList = driver
-                .findElements(By.xpath("//ul/li//span[@class='sc-14dd939d-1 PnacM']//span[@class='ipc-rating-star ipc-rating-star--base ipc-rating-star--imdb ratingGroup--imdb-rating']"));
+                .findElements(By.xpath(
+                        "//ul/li//span[@class='sc-14dd939d-1 PnacM']//span[@class='ipc-rating-star ipc-rating-star--base ipc-rating-star--imdb ratingGroup--imdb-rating']"));
 
         float largestNumm = 0;
         float valuee = 0;
@@ -103,8 +98,10 @@ public class Automate_imdb_ratings {
             }
         }
         System.out.println("highest rating is: " + largestNumm);
-WebElement hstratngMvname = driver.findElement(By.xpath("//ul/li//span[@class='sc-14dd939d-1 PnacM']//span[contains(text(),'"+largestNumm+"')]/ancestor::div[@class='sc-14dd939d-0 fBusXE cli-children']//h3"));
-System.out.println("highest rating movie name is: " + hstratngMvname.getText());
+        WebElement hstratngMvname = driver
+                .findElement(By.xpath("//ul/li//span[@class='sc-14dd939d-1 PnacM']//span[contains(text(),'"
+                        + largestNumm + "')]/ancestor::div[@class='sc-14dd939d-0 fBusXE cli-children']//h3"));
+        System.out.println("highest rating movie name is: " + hstratngMvname.getText());
 
         System.out.println("end Test case: testCase01");
 
