@@ -11,11 +11,12 @@ public class App {
         // SearchAmazon srcAmz = new SearchAmazon();
         // Automate_count_hyperlinks ach = new Automate_count_hyperlinks();
         // Automate_image_urls aiu = new Automate_image_urls();
-        Automate_nested_frames_text anft = new Automate_nested_frames_text();
+        // Automate_nested_frames_text anft = new Automate_nested_frames_text();
+        Automate_imdb_ratings air = new Automate_imdb_ratings();
 
-        anft.testCase01();
+        air.testCase01();
 
-        anft.endTest(); // End your test by clearning connections and closing browser
+        air.endTest(); // End your test by clearning connections and closing browser
     }
 
     public static void main(String[] args) throws InterruptedException, MalformedURLException {
